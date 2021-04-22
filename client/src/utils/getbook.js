@@ -1,6 +1,6 @@
 import axios from "axios";
 
-
+const baseURL = "http://localhost:3001";
 
 export default {
   getGoogleBooks: function (book) {
@@ -13,15 +13,15 @@ export default {
 
   // Gets all books
   getBooks: function () {
-    return axios.get("/api/books");
+    return axios.get(`${baseURL}/api/books`);
   },
   // Gets the book with the given id
   getBook: function (id) {
-    return axios.get("/api/books/" + id);
+    return axios.get(`${baseURL}/api/books` + id);
   },
 
   // Saves a book to the database
   saveBook: function (bookData) {
-    return axios.post("/api/books", bookData);
+    return axios.post(`${baseURL}/api/books`, bookData);
   },
 };

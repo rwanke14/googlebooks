@@ -50,18 +50,18 @@ const SearchBar = () => {
         event.preventDefault();
         
           API.saveBook({
-            title: saved.title,
             author: saved.author,
             description: saved.description,
             image: saved.image,
-            link: saved.link
+            link: saved.link,
+            title: saved.title
           })
             .then(() => setSaved({
-                title: "",
                 author: "",
                 description: "",
                 image: "",
-                link: ""
+                link: "",
+                title: ""
             }))
             //.then(() => loadBooks())
             .catch(err => console.log(err));
