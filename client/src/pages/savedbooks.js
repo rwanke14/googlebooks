@@ -1,10 +1,10 @@
 import React from 'react'
-import SearchBar from '../components/SearchBar'
+import SavedBooks from "../components/SavedBooks"
 
 const Savedbooks = () => {
     return (
         <div>
-            
+            <SavedBooks />
         </div>
     )
 }

@@ -1,15 +1,22 @@
+import React from 'react'
+import { BrowserRouter, Route, Switch  } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navbar";
 import Saved from "./pages/savedbooks"
+import Hero from "./components/Hero"
+import Search from "./components/SearchBar"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Navigation />
         <Hero />
+        <Switch>
         <Route exact path="/saved" component={Search}/>
-        <Route exact path="/saved" component={Saved}/>
+        <Route exact path="/search" component={Saved}/>
+        </Switch>
       </BrowserRouter>
     </div>
   );

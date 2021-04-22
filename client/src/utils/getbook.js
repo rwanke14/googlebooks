@@ -1,10 +1,10 @@
-import React, {useState} from "react";
 import axios from "axios";
 
 
 
 export default {
   getGoogleBooks: function (book) {
+    
     
     return axios.get(
         "https://www.googleapis.com/books/v1/volumes?q=" + book + "&key=AIzaSyDllATq3ds5Y1sRa6gpMoXmWGfC46aB7SM&maxResults=20"
